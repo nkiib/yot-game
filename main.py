@@ -1,8 +1,8 @@
 import process as pro
 
 player1 = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
-turn = 1
-while turn <= 12:
+game_turn = 1
+while game_turn <= 12:
     dicex = [0,0,0,0,0]
     pro.dice_th(dicex)
     turn = 0
@@ -72,7 +72,7 @@ while turn <= 12:
 
     if player1.count(-1) == 0:
         break
-    turn += 1
+    game_turn += 1
 
 out_point = sum(player1)
 if player1[1] + player1[2] + player1[3] + player1[4] + player1[5] + player1[6] >= 63:
