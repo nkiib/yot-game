@@ -48,7 +48,7 @@ def result(dicex):
             if dicex.count(6) >= 1 or dicex.count(2) >= 1:
                 res_point[11] = 15 # 2,3,4,5と3,4,5,6の判定
         elif dicex.count(2) >= 1 and dicex.count(1) >= 1:
-            res_point[11] # 1,2,3,4の判定
+            res_point[11] = 15# 1,2,3,4の判定
 
     return res_point    
 

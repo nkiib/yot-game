@@ -1,9 +1,6 @@
-import random
 import process as pro
-import display as disp
 
 player1 = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
-
 while True:
     dicex = [0,0,0,0,0]
     pro.dice_th(dicex)
