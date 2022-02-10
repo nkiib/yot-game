@@ -15,9 +15,7 @@ while True:
         turn += 1
 
     while True:
-
         print(dicex)
-
         poss_point = pro.result(dicex)
 
         print("ヨット(a)          " + str(poss_point[7]))
@@ -32,7 +30,7 @@ while True:
         print("フォー(j)          " + str(poss_point[4]))
         print("ファイブ(k)        " + str(poss_point[5]))
         print("シックス(l)        " + str(poss_point[6]))
-
+        print("現在の合計         " + str(sum(poss_point))) 
 
         yaku = input("この回で自分の得点とする役を括弧内のアルファベット小文字で入力してください")
 
