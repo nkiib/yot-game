@@ -1,7 +1,7 @@
 import process as pro
 
 player1 = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
-game_turn = 1
+game_turn = 1 # ゲームターン
 while game_turn <= 12:
     dicex = [0,0,0,0,0]
     pro.dice_th(dicex)
