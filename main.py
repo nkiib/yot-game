@@ -72,4 +72,7 @@ while True:
     if player1.count(-1) == 0:
         break       
 
+out_point = sum(player1)
+if player1[1] + player1[2] + player1[3] + player1[4] + player1[5] + player1[6] >= 63:
+    out_point += 35
 print('あなたの最終的な点数は' + str(sum(player1)) + ' でした。')
