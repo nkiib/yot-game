@@ -11,7 +11,7 @@ while game_turn <= 12:
         print('振り直したい値をアルファベットで入力してください ex. A B D')
         print('この出目で決定する場合"F"を入力指定ください')
         choice = input().split(" ")
-        # if choice == 'F' : break
+        if 'F' in choice : break
         dicex = pro.rechoice(choice,dicex)
         turn += 1
 
