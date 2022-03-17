@@ -7,7 +7,7 @@ while game_turn <= 12:
     pro.dice_th(dicex)
     turn = 0
     while turn <= 1:
-        print('A:' + str(dicex[0]) + ' B:' + str(dicex[1]) + ' C:' + str(dicex[2]) + ' D:' + str(dicex[3]) + ' E:' + str(dicex[4]))
+        print('＜＜A:' + str(dicex[0]) + ' B:' + str(dicex[1]) + ' C:' + str(dicex[2]) + ' D:' + str(dicex[3]) + ' E:' + str(dicex[4])+ '＞＞')
         print('振り直したい値をアルファベットで入力してください ex. A B D')
         print('この出目で決定する場合"F"を入力指定ください')
         choice = input().split(" ")
@@ -31,7 +31,6 @@ while game_turn <= 12:
         print("フォー(j)          " + str(poss_point[4]))
         print("ファイブ(k)        " + str(poss_point[5]))
         print("シックス(l)        " + str(poss_point[6]))
-        print("現在の合計         " + str(sum(poss_point))) 
 
         yaku = input("この回で自分の得点とする役を括弧内のアルファベット小文字で入力してください")
 
@@ -57,6 +56,8 @@ while game_turn <= 12:
 
     print("この回でのあなたの得点は" + str(point) + "点でした")
 
+    player1sum = sum(player1) + player1.count(-1)
+
     print("ヨット          " + str(player1[7]))
     print("フルハウス       " + str(player1[8]))
     print("フォーナンバーズ  " + str(player1[9]))
@@ -69,6 +70,7 @@ while game_turn <= 12:
     print("フォー          " + str(player1[4]))
     print("ファイブ        " + str(player1[5]))
     print("シックス        " + str(player1[6]))
+    print("現在の合計       " + str(player1sum) + "\n") 
 
     if player1.count(-1) == 0:
         break
@@ -77,4 +79,4 @@ while game_turn <= 12:
 out_point = sum(player1)
 if player1[1] + player1[2] + player1[3] + player1[4] + player1[5] + player1[6] >= 63:
     out_point += 35
-print('あなたの最終的な点数は' + str(sum(player1)) + ' でした。')
+print('あなたの最終的な点数は' + str(sum(player1)) + ' でした。' + "\n")
