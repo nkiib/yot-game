@@ -70,7 +70,7 @@ while game_turn <= 12:
     print("フォー          " + str(player1[4]))
     print("ファイブ        " + str(player1[5]))
     print("シックス        " + str(player1[6]))
-    print("現在の合計       " + str(player1sum) + "\n") 
+    print("現在の合計       " + str(player1sum) + "\n\n") 
 
     if player1.count(-1) == 0:
         break

@@ -1,5 +1,30 @@
 import random
 
+def dice_th(dice): # 初回のダイス振り
+    i = 0
+    while i < 5:
+        dice[i] = random.randint(1,6)
+        i += 1
+    return dice
+
+def rechoice(choice,dicex): # 2/3回目のダイス振り
+
+    recho = [False , False , False , False , False]
+    if 'A' in choice: recho[0] = True
+    if 'B' in choice: recho[1] = True
+    if 'C' in choice: recho[2] = True
+    if 'D' in choice: recho[3] = True
+    if 'E' in choice: recho[4] = True
+
+    i = 0
+    while i < 5:
+        if recho[i] == True:
+            dicex[i] = random.randint(1,6) 
+            i += 1
+        else: i += 1
+    return dicex
+
+
 def result(dicex):
     # 各要素の出現回数を数える
     res = [0,0,0,0,0,0]
@@ -52,26 +77,4 @@ def result(dicex):
 
     return res_point    
 
-def rechoice(choice,dicex): # 2/3回目のダイス振り
 
-    recho = [False , False , False , False , False]
-    if 'A' in choice: recho[0] = True
-    if 'B' in choice: recho[1] = True
-    if 'C' in choice: recho[2] = True
-    if 'D' in choice: recho[3] = True
-    if 'E' in choice: recho[4] = True
-
-    i = 0
-    while i < 5:
-        if recho[i] == True:
-            dicex[i] = random.randint(1,6) 
-            i += 1
-        else: i += 1
-    return dicex
-
-def dice_th(dice): # 初回のダイス振り
-    i = 0
-    while i < 5:
-        dice[i] = random.randint(1,6)
-        i += 1
-    return dice
